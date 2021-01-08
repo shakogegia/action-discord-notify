@@ -6,7 +6,9 @@ const colors = {
   success: "#2ecc71",
   failure: "#e74c3c",
   cancelled: "#f1c40f",
-}(async () => {
+};
+
+(async () => {
   try {
     const url = core.getInput("url").trim();
     const status = core.getInput("status").toString();
@@ -15,13 +17,9 @@ const colors = {
     const username = core.getInput("username");
 
     const mention = core.getInput("mention");
-    console.log("🚀 ~ file: index.js ~ line 18 ~ mention", mention)
     const mention_if = core.getInput("mention_if");
-    console.log("🚀 ~ file: index.js ~ line 20 ~ mention_if", mention_if)
 
-    console.log("🚀 ~ file: index.js ~ line 21 ~ status", status)
     const color = colors[status];
-    console.log("🚀 ~ file: index.js ~ line 21 ~ color", color)
 
     let content = `${github.context.workflow} - ${status}`;
 
