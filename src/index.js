@@ -2,28 +2,40 @@ const core = require("@actions/core");
 const github = require("@actions/github");
 const send = require("./send");
 
+const colors = {
+  success: "#2ecc71",
+  failure: "#e74c3c",
+  cancelled: "#f1c40f",
+}
 
 (async () => {
   try {
     const url = core.getInput("url").trim();
     const status = core.getInput("status");
-    console.log("🚀 ~ file: index.js ~ line 10 ~ status", status)
     const title = core.getInput("title");
     const description = core.getInput("description");
+    const username = core.getInput("username");
+    
     const mention = core.getInput("mention");
     const mention_if = core.getInput("mention_if");
+
+    const color = colors[status]
+
+    let content = `${github.context.workflow} - ${status}`
+
+    if(mention_if === status) {
+      content = `${content} ${mention}`
+    }
   
     await send({
       url,
-      username: "Ci/Cd",
-      content: `${github.context.workflow} - Success`,
+      username,
+      content,
       embeds: [
         {
           title,
           description,
-          author: {
-            name: "Ci/Cd",
-          },
+          color,
           fields: [
             {
               name: "Repository",
