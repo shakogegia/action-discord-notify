@@ -9197,9 +9197,9 @@ const sendToDiscord = ({ url, username, content, embeds }) => {
 var send = sendToDiscord;
 
 const colors = {
-  success: "#2ecc71",
-  failure: "#e74c3c",
-  cancelled: "#f1c40f",
+  success: 3066993,
+  failure: 15158332,
+  cancelled: 15844367,
 };
 
 (async () => {

@@ -3,9 +3,9 @@ const github = require("@actions/github");
 const send = require("./send");
 
 const colors = {
-  success: "#2ecc71",
-  failure: "#e74c3c",
-  cancelled: "#f1c40f",
+  success: 3066993,
+  failure: 15158332,
+  cancelled: 15844367,
 };
 
 (async () => {
