@@ -23,7 +23,7 @@ const send = require("./send");
       embeds: [
         {
           title,
-          description,
+          description: title,
           author: {
             name: "Ci/Cd",
           },
