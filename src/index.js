@@ -5,10 +5,11 @@ const send = require("./send");
 
 (async () => {
   try {
-    const url = core.getInput("url");
+    const url = core.getInput("url").trim();
     console.log("🚀 ~ file: index.js ~ line 9 ~ url", url)
     const status = core.getInput("status");
     const title = core.getInput("title");
+    console.log("🚀 ~ file: index.js ~ line 12 ~ title", title)
     const description = core.getInput("description");
     const mention = core.getInput("mention");
     const mention_if = core.getInput("mention_if");
