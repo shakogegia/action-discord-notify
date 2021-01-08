@@ -9246,6 +9246,7 @@ var send = sendToDiscord;
   } catch (error) {
     console.log("🚀 ~ file: index.js ~ line 51 ~ error", error);
     console.log("🚀 ~ file: index.js ~ line 51 ~ error", error.message);
+    console.log("🚀 ~ file: index.js ~ line 51 ~ error", error.response);
     core.setFailed(error.message);
   }
 })();
