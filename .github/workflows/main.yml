@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Test action-discord-notify
+
+    steps:
+    - name: Discord Notification
+      uses: actions/action-discord-notify@master
+      if: success()
+      with:
+        status: ${{ job.status }}
+        title: "${{ github.workflow }} Alpha"
+        mention: ${{ secrets.DISCORD_MENTION }}
+        mention_if: "success"
+        url: ${{ secrets.DISCORD_CI_CD_WEBHOOK_URL }}

@@ -1,0 +1,21 @@
+{
+  "name": "action-discord-notify",
+  "version": "1.0.0",
+  "description": "Send notification about workflow status to discord",
+  "main": "src/index.js",
+  "scripts": {
+    "release": "release-it"
+  },
+  "keywords": [],
+  "author": "Shalva Gegia <shalva.gegia@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^2.0.0",
+    "release-it": "^14.2.2"
+  }
+}
