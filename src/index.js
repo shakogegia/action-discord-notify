@@ -14,7 +14,7 @@ const send = require("./send");
     const mention_if = core.getInput("mention_if");
   
     // github.context.job.status
-    console.log("🚀 ~ github.context", github.context)
+    // console.log("🚀 ~ github.context", github.context)
   
     const result = await send({
       url,
@@ -48,6 +48,7 @@ const send = require("./send");
   
     core.setOutput('result', result);
   } catch (error) {
+    console.log("🚀 ~ file: index.js ~ line 51 ~ error", error)
     core.setFailed(error.message);
   }
 })();
