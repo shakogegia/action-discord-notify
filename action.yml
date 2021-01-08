@@ -2,12 +2,16 @@ name: 'Discord Notification'
 description: 'Greet someone and record the time'
 inputs:
   status:
-    required: false
+    required: true
   title:
+    required: false
+  username:
     required: false
   mention:
     required: false
   mention_if:
+    required: false
+  mention_always:
     required: false
   url:
     required: true
