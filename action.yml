@@ -13,8 +13,6 @@ inputs:
     required: false
   mention_if:
     required: false
-  mention_always:
-    required: false
   url:
     required: true
 runs:

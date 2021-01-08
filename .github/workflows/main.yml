@@ -10,10 +10,9 @@ jobs:
     steps:
     - name: Discord Notification
       uses: shakogegia/action-discord-notify@master
-      if: success()
+      if: always()
       with:
         status: ${{ job.status }}
         title: "${{ github.workflow }} Alpha"
         mention: ${{ secrets.DISCORD_MENTION }}
-        mention_if: "success"
         url: ${{ secrets.DISCORD_CI_CD_WEBHOOK_URL }}

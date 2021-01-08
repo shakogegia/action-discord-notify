@@ -9212,13 +9212,12 @@ const colors = {
 
     const mention = core.getInput("mention");
     const mention_if = core.getInput("mention_if");
-    const mention_always = core.getInput("mention_always");
 
     const color = colors[status];
 
     let content = `${github.context.workflow} - ${status}`;
 
-    if (mention_if === status || mention_always) {
+    if (mention_if === status || mention_if === 'always') {
       content = `${mention} ${content}`;
     }
 
