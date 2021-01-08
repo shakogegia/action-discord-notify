@@ -6,6 +6,7 @@ const send = require("./send");
 (async () => {
   try {
     const url = core.getInput("url");
+    console.log("🚀 ~ file: index.js ~ line 9 ~ url", url)
     const status = core.getInput("status");
     const title = core.getInput("title");
     const description = core.getInput("description");
@@ -17,7 +18,6 @@ const send = require("./send");
   
     const result = await send({
       url,
-  
       content: `${github.workflow} - Success`,
       embeds: [
         {
