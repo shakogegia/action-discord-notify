@@ -9218,7 +9218,7 @@ var send = sendToDiscord;
           title,
           description,
           author: {
-            name: username,
+            name: "Ci/Cd",
           },
           fields: [
             {

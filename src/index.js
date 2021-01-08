@@ -25,7 +25,7 @@ const send = require("./send");
           title,
           description,
           author: {
-            name: username,
+            name: "Ci/Cd",
           },
           fields: [
             {
