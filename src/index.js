@@ -14,6 +14,8 @@ try {
   console.log("🚀 ~ github.context", github.context)
 
   send({
+    url,
+    
     content: `${github.workflow} - Success`,
     embeds: [
       {

@@ -7,7 +7,7 @@ jobs:
 
     steps:
     - name: Discord Notification
-      uses: actions/action-discord-notify@master
+      uses: shakogegia/action-discord-notify@master
       if: success()
       with:
         status: ${{ job.status }}

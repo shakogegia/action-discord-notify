@@ -7,7 +7,7 @@ const sendToDiscord = ({ url, username, content, embeds }) => {
     data: {
       content,
       embeds,
-      username: "Github",
+      username,
     },
   });
 };
