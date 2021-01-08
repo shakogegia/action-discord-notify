@@ -9211,6 +9211,7 @@ var send = sendToDiscord;
   
     const result = await send({
       url,
+      username: "Ci/Cd",
       content: `${github.workflow} - Success`,
       embeds: [
         {

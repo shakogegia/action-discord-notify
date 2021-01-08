@@ -18,6 +18,7 @@ const send = require("./send");
   
     const result = await send({
       url,
+      username: "Ci/Cd",
       content: `${github.workflow} - Success`,
       embeds: [
         {
