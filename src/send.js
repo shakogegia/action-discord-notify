@@ -1,3 +1,4 @@
+// require axios
 const axios = require("axios");
 
 const sendToDiscord = ({ url, username, content, embeds }) => {
