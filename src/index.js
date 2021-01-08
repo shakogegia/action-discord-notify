@@ -24,6 +24,9 @@ const send = require("./send");
         {
           title,
           description,
+          author: {
+            name: username,
+          },
           fields: [
             {
               name: "Repository",
@@ -49,6 +52,7 @@ const send = require("./send");
     core.setOutput('result', result);
   } catch (error) {
     console.log("🚀 ~ file: index.js ~ line 51 ~ error", error)
+    console.log("🚀 ~ file: index.js ~ line 51 ~ error", error.message)
     core.setFailed(error.message);
   }
 })();

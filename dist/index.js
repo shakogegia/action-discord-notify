@@ -9217,6 +9217,9 @@ var send = sendToDiscord;
         {
           title,
           description,
+          author: {
+            name: username,
+          },
           fields: [
             {
               name: "Repository",
@@ -9242,6 +9245,7 @@ var send = sendToDiscord;
     core.setOutput('result', result);
   } catch (error) {
     console.log("🚀 ~ file: index.js ~ line 51 ~ error", error);
+    console.log("🚀 ~ file: index.js ~ line 51 ~ error", error.message);
     core.setFailed(error.message);
   }
 })();
