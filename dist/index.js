@@ -9200,22 +9200,20 @@ var send = sendToDiscord;
   try {
     const url = core.getInput("url").trim();
     const status = core.getInput("status");
+    console.log("🚀 ~ file: index.js ~ line 10 ~ status", status);
     const title = core.getInput("title");
     const description = core.getInput("description");
     const mention = core.getInput("mention");
     const mention_if = core.getInput("mention_if");
   
-    // github.context.job.status
-    console.log("🚀 ~ github.context", github.context);
-  
-    const result = await send({
+    await send({
       url,
       username: "Ci/Cd",
       content: `${github.context.workflow} - Success`,
       embeds: [
         {
           title,
-          description: title,
+          description,
           author: {
             name: "Ci/Cd",
           },
@@ -9241,11 +9239,8 @@ var send = sendToDiscord;
       ],
     });
   
-    core.setOutput('result', result);
+    console.log("Success ✅");
   } catch (error) {
-    // console.log("🚀 ~ file: index.js ~ line 51 ~ error", error)
-    // console.log("🚀 ~ file: index.js ~ line 51 ~ error", error.message)
-    // console.log("🚀 ~ file: index.js ~ line 51 ~ error", error.response)
     core.setFailed(error.message);
   }
 })();
