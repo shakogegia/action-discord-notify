@@ -29,7 +29,7 @@ const send = require("./send");
           fields: [
             {
               name: "Repository",
-              value: github.context.payload.repository.name,
+              value: github.context.repo.repo,
             },
             {
               name: "Ref",
