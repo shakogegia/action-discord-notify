@@ -18,6 +18,11 @@ jobs:
       with:
         name: win32
         path: src
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: gego/win32
+        path: src
 
     - name: Upload Release Asset
       id: upload-release-asset 
