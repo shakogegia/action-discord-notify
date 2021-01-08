@@ -13,7 +13,7 @@ try {
   // github.context.job.status
   console.log("🚀 ~ github.context", github.context)
 
-  send({
+  const result = await send({
     url,
 
     content: `${github.workflow} - Success`,
@@ -42,6 +42,8 @@ try {
       },
     ],
   });
+
+  core.setOutput('result', result);
 } catch (error) {
   core.setFailed(error.message);
 }
