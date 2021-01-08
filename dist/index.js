@@ -9207,7 +9207,6 @@ const colors = {
     const url = core.getInput("url").trim();
     const status = core.getInput("status").toString();
     const title = core.getInput("title");
-    const description = core.getInput("description");
     const username = core.getInput("username");
 
     const mention = core.getInput("mention");
@@ -9228,7 +9227,6 @@ const colors = {
       embeds: [
         {
           title,
-          description,
           color,
           fields: [
             {
