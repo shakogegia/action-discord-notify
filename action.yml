@@ -5,6 +5,8 @@ inputs:
     required: true
   title:
     required: false
+  description:
+    required: false
   username:
     required: false
   mention:
