@@ -1,17 +1,16 @@
 name: 'Discord Notification'
 description: 'Greet someone and record the time'
 inputs:
-  status
+  status:
     required: false
-  title
+  title:
     required: false
-  mention
+  mention:
     required: false
-  mention_if
+  mention_if:
     required: false
-  url
+  url:
     required: true
-    
 runs:
   using: 'node12'
   main: 'src/index.js'
