@@ -1,6 +1,9 @@
 name: Test Workflow
 
-on: [push]
+on:
+  push:
+    tags:
+      - '*'
 
 jobs:
   hello_world_job:
