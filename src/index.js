@@ -1,8 +1,5 @@
-// require @actions/core
 const core = require("@actions/core");
-// require @actions/github
 const github = require("@actions/github");
-// require ./send.js
 const send = require("./send");
 
 try {
