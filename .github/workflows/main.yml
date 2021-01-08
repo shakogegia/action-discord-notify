@@ -8,6 +8,12 @@ jobs:
     name: Test action-discord-notify
 
     steps:
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: win32
+        path: src
+
     - name: Discord Notification
       uses: shakogegia/action-discord-notify@master
       if: always()
