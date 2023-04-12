@@ -9205,21 +9205,36 @@ const colors = {
 (async () => {
   try {
     const url = core.getInput("url").trim();
+    console.log("🚀 ~ file: index.js:14 ~ url:", url);
     const status = core.getInput("status").toString();
+    console.log("🚀 ~ file: index.js:16 ~ status:", status);
     const title = core.getInput("title");
+    console.log("🚀 ~ file: index.js:18 ~ title:", title);
     const description = core.getInput("description");
+    console.log("🚀 ~ file: index.js:20 ~ description:", description);
     const username = core.getInput("username");
+    console.log("🚀 ~ file: index.js:22 ~ username:", username);
 
     const mention = core.getInput("mention");
+    console.log("🚀 ~ file: index.js:25 ~ mention:", mention);
     const mention_if = core.getInput("mention_if");
+    console.log("🚀 ~ file: index.js:27 ~ mention_if:", mention_if);
 
     const color = colors[status];
+    console.log("🚀 ~ file: index.js:30 ~ color:", color);
 
     let content = `${github.context.workflow} - ${status}`;
 
+    console.log("🚀 ~ file: index.js:34 ~ content:", content);
     if (mention_if === status || mention_if === "always") {
       content = `${mention} ${content}`;
     }
+    console.log("🚀 ~ file: index.js:38 ~ content:", content);
+
+    console.log(github.context.repo.repo);
+    console.log(github.context.ref);
+    console.log(github.context.eventName);
+    console.log(github.context.workflow);
 
     await send({
       url,
