@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/shakogegia/action-discord-notify/compare/1.0.5...1.0.6) (2023-04-12)
+
+
+### Bug Fixes
+
+* deps ([7696f2b](https://github.com/shakogegia/action-discord-notify/commit/7696f2b26b4ef58a2c19088ce16f193bd451e5a6))
+
 ## [1.0.5](https://github.com/shakogegia/action-discord-notify/compare/1.0.4...1.0.5) (2021-01-08)
 
 
