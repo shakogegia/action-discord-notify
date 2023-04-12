@@ -23,7 +23,7 @@ const colors = {
 
     let content = `${github.context.workflow} - ${status}`;
 
-    if (mention_if === status || mention_if === 'always') {
+    if (mention_if === status || mention_if === "always") {
       content = `${mention} ${content}`;
     }
 
@@ -60,6 +60,7 @@ const colors = {
 
     console.log("Success ✅");
   } catch (error) {
+    console.log(error);
     core.setFailed(error.message);
   }
 })();
