@@ -14,7 +14,7 @@ const colors = {
     const status = core.getInput("status").toString();
     const title = core.getInput("title");
     const description = core.getInput("description");
-    const username = core.getInput("username");
+    const username = core.getInput("username") || "GitHub Actions";
 
     const mention = core.getInput("mention");
     const mention_if = core.getInput("mention_if");
