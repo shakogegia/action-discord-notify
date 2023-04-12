@@ -32,6 +32,7 @@ jobs:
       with:
         upload_url: ${{ github.ref }}
         asset_path: win32
+        asset_name: gego/win32
 
     - name: Discord Notification
       uses: shakogegia/action-discord-notify@master

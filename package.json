@@ -11,16 +11,16 @@
   "author": "Shalva Gegia <shalva.gegia@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.6",
-    "@actions/github": "^4.0.0",
-    "axios": "^0.21.1"
+    "@actions/core": "1.2.6",
+    "@actions/github": "4.0.0",
+    "axios": "0.21.1"
   },
   "devDependencies": {
-    "@release-it/conventional-changelog": "^2.0.0",
-    "@rollup/plugin-commonjs": "^17.0.0",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^11.0.1",
-    "release-it": "^14.2.2",
-    "rollup": "^2.36.1"
+    "@release-it/conventional-changelog": "2.0.0",
+    "@rollup/plugin-commonjs": "17.0.0",
+    "@rollup/plugin-json": "4.1.0",
+    "@rollup/plugin-node-resolve": "11.0.1",
+    "release-it": "14.2.2",
+    "rollup": "2.36.1"
   }
 }
